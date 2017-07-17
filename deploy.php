@@ -14,7 +14,8 @@ add('writable_dirs', []);
 
 // Hosts
 
-host('home.walesalami.com')
+//host('localhost')
+localhost()
 //    ->stage('production')
     ->set('deploy_path', '/home/wale');
     
@@ -24,6 +25,18 @@ host('home.walesalami.com')
 
 
 // Tasks
+
+task('haha', function () {
+    $deployPath = get('deploy_path');
+	writeln($deployPath);
+    $host = host('home.walesalami.com');
+    $port = $host->getPort();
+	writeln($port);
+});
+
+task('test', function () {
+    writeln('Hello world');
+});
 
 desc('Restart PHP-FPM service');
 task('php-fpm:restart', function () {

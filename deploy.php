@@ -16,7 +16,7 @@ add('writable_dirs', []);
 
 host('home.walesalami.com')
 //    ->stage('production')
-    ->set('deploy_path', '/home/wale/');
+    ->set('deploy_path', '/home/wale');
     
 //host('beta.project.com')
 //    ->stage('beta')

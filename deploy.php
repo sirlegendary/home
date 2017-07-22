@@ -14,29 +14,17 @@ add('writable_dirs', []);
 
 // Hosts
 
-//host('localhost')
-localhost()
-//    ->stage('production')
-    ->set('deploy_path', '/home/wale');
-    
-//host('beta.project.com')
-//    ->stage('beta')
-//    ->set('deploy_path', '/var/www/project.com');  
+host('wale@94.193.171.64')
+    // ->become('wale')
+    ->set('deploy_path', '/var/www/html');
 
+
+// host('beta.project.com')
+//     ->stage('beta')
+//     ->set('deploy_path', '/var/www/project.com');
+//
 
 // Tasks
-
-task('haha', function () {
-    $deployPath = get('deploy_path');
-	writeln($deployPath);
-    $host = host('home.walesalami.com');
-    $port = $host->getPort();
-	writeln($port);
-});
-
-task('test', function () {
-    writeln('Hello world');
-});
 
 desc('Restart PHP-FPM service');
 task('php-fpm:restart', function () {

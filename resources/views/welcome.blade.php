@@ -83,8 +83,8 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://www.instagram.com/wale_media/"><i class="fa fa-instagram" aria-hidden="true"></i>wale_media</a>
-            
+                    <a href="https://www.instagram.com/wale_media/">Follow me on Insta @wale_media</a>
+
                 </div>
             </div>
         </div>

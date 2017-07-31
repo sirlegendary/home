@@ -1,0 +1,9 @@
+DATABASE
+
+GRANT ALL PRIVILEGES ON *.* TO root@localhost;
+
+GRANT SELECT ON *.* TO 'wale'@'localhost' IDENTIFIED BY 'wolken2017';
+
+select user,host from mysql.user;
+
+mysql> show grants;

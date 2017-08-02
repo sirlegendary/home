@@ -84,7 +84,6 @@
 
                 <div class="links">
                     <a href="https://www.instagram.com/wale_media/">Follow me on Insta @wale_media</a>
-
                 </div>
             </div>
         </div>

@@ -10,9 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//
 //Route::get('/', function () {
-//    return view('welcome');
+//    return (Auth::check()) ? View::make('home') : redirect()->route('login');
 //});
 
 Auth::routes();

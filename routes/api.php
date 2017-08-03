@@ -31,7 +31,7 @@ Route::get('/status', function (Request $request) {
     ]);
 });
 
-Route::post('users/signin', 'Api\AuthController@signin');
+Route::post('users/signin', 'AuthController@signin');
 Route::group(['middleware' => ['jwt.auth']], function () {
     Route::resource('users', 'Api\UserController');
     Route::resource('downloads', 'Api\DownloadController');

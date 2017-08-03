@@ -15,6 +15,13 @@ import router from './routes';
 
 Vue.config.devtools = true;
 
+Vue.use(require('@websanova/vue-auth'), {
+    auth: require('@websanova/vue-auth/drivers/auth/bearer.js'),
+    http: require('@websanova/vue-auth/drivers/http/vue-resource.1.x.js'),
+    router: require('@websanova/vue-auth/drivers/router/vue-router.2.x.js'),
+    rolesVar: 'type'
+});
+
 Vue.component('app', require('./components/App.vue'));
 
 new Vue({

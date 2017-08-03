@@ -1,5 +1,6 @@
 <template>
     <v-app>
+    <div v-if="$auth.ready() && loaded">
         <v-navigation-drawer
           temporary
           v-model="drawer"
@@ -8,6 +9,14 @@
           overflow
           absolute
         >
+
+        <v-list v-show="!$auth.check()">
+            <router-link :to="{name: 'login'}">login</router-link> &bull;
+            <router-link :to="{name: 'register'}">register</router-link> &bull;
+            <router-link :to="{name: 'oauth1'}">oauth1</router-link> &bull;
+            <router-link :to="{name: 'oauth2'}">oauth2</router-link>
+        </v-list>
+
           <v-list class="pa-0">
             <v-list-tile v-if="mini" @click.native.stop="mini = !mini">
               <v-list-tile-action>
@@ -40,10 +49,14 @@
             </v-list-tile>
           </v-list>
         </v-navigation-drawer>
+
         <v-toolbar fixed dark>
           <v-toolbar-side-icon @click.native.stop="drawer = !drawer"></v-toolbar-side-icon>
           <v-toolbar-title>Toolbar</v-toolbar-title>
         </v-toolbar>
+
+        </div>
+
         <main>
             <v-container fluid>
                 <router-view></router-view>

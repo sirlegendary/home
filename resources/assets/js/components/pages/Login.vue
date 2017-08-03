@@ -1,5 +1,5 @@
 <template>
-    <v-card class="grey lighten-4 elevation-1">
+    <v-card class="secondary elevation-0">
         <v-card-text>
             <v-container fluid>
                 <v-layout row>
